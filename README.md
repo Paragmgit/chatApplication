@@ -21,19 +21,22 @@
 * In service layer write a business logic of CRUD operation.
 * In repository layer exteds jpsRepositor.
 ## Constraints:
-* doctor model will have-
+* User model will have-
 * userId
 * firstName,LastName,phoneNumber,email,age,gender...
 * In user class connected with statusid by manyToOne relation.
-* patient model will have:-
-* patientid
-* gender
-* patientDisease
-* patientName
-* patientNuber
+* Status model will have:-
+* statusId
+* statusName,statusDescription.
+* ChatHistory model will have:-
+* chatId, message.
+* createdDate, updatedDate.
+* sender connected to the userid with manyToOne reationship
+* receiver connected to the userid with manyToOne reationship
 ## Endpoints to provided :
-* Adddoctor and patient
-* update doctor by doctorId
-* delete doctor by doctorId
-* Get all doctor
-* Get doctor by id
+* Adduser by postMapping
+* get user by getMapping
+* update user by putMapping
+* delete user by deleteMapping
+* add status by postMapping 
+* send message by postMapping in chatController
